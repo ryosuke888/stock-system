@@ -14,3 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'StocksController@index');
+// Route::get('/stocks/{post}', 'StocksController@show')->where('post', '[0-9]+')
+Route::get('/stocks/create', 'StocksController@create');
+Route::post('/stocks', 'StocksController@store');
+Route::get('/stocks/{stock}/edit', 'StocksController@edit');
+Route::patch('/stocks/{stock}', 'StocksController@update');
+Route::delete('/stocks/{stock}', 'StocksController@destroy');
